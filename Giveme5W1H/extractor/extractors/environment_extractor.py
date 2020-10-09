@@ -52,7 +52,7 @@ class EnvironmentExtractor(AbsExtractor):
         self.weights = weights
 
         # init db connection used for location resolution
-        self.geocoder = Nominatim(domain=host, timeout=8)
+        self.geocoder = Nominatim(user_agent='someemail@email.com', domain=host, timeout=8)
 
         # init calender object for date resolution
         self.calendar = pdt.Calendar()
